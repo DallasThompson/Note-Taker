@@ -1,6 +1,6 @@
 const express = require("express");
 const path = require("path");
-const port = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3001;
 
 const notesRouter = require("./backendRoutes/notes");
 
@@ -25,6 +25,6 @@ app.get("/notes", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "notes.html"));
 });
 
-app.listen(port, () => {
-  console.log(`server running on http://localhost:${port} `);
+app.listen(PORT, () => {
+  console.log(`server running on http://localhost:${PORT} `);
 });
